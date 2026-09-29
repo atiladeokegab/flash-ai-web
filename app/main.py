@@ -38,4 +38,5 @@ async def describe(image: UploadFile = File(...)):
 
 
 WEB = Path(__file__).resolve().parent.parent / "web"
-app.mount("/", StaticFiles(directory=WEB, html=True, check_dir=False), name="web")
+if WEB.is_dir():  # web/ lands with the web vertical; restart the server to pick it up
+    app.mount("/", StaticFiles(directory=WEB, html=True), name="web")
