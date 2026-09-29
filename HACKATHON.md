@@ -22,8 +22,8 @@ date, so this UTC column is the clock, never the milestone.
 
 | Deadline | Event time | UTC |
 |---|---|---|
-| build start | 2026-09-29T16:15+01:00 | 2026-09-29T15:15Z |
-| core | 2026-09-29T16:25+01:00 | 2026-09-29T15:25Z |
+| build start | 2026-09-29T15:35+01:00 | 2026-09-29T14:35Z |
+| core | 2026-09-29T15:45+01:00 | 2026-09-29T14:45Z |
 | code freeze | 2026-09-29T16:45+01:00 | 2026-09-29T15:45Z |
 | submit | 2026-09-29T16:55+01:00 | 2026-09-29T15:55Z |
 
