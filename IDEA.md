@@ -42,8 +42,8 @@ contracts; only the lead changes it.
 
 | Area | Directories | Owner | Issues |
 |---|---|---|---|
-| core | `pyproject.toml`, `app/__init__.py`, `app/main.py`, `app/contract.py`, `tests/__init__.py`, `tests/test_api.py` | @atiladeokegab (Zeus builds) | — |
-| describe | `app/describe/`, `tests/describe/` | @atiladeokegab (Zeus builds) | — |
-| web | `web/` | @Atilmatrix | — |
-| submission | `docs/pitch.md`, `docs/architecture/`, `README.md` | @atiladeokegab (Zeus builds the diagrams) | — |
-| pool | `samples/`, `docs/demo.md` | pool | — |
+| core | `pyproject.toml`, `app/__init__.py`, `app/main.py`, `app/contract.py`, `tests/__init__.py`, `tests/test_api.py` | @atiladeokegab (Zeus builds) | #1 |
+| describe | `app/describe/`, `tests/describe/` | @atiladeokegab (Zeus builds) | #2 |
+| web | `web/` | @Atilmatrix | #3 |
+| submission | `docs/pitch.md`, `docs/architecture/`, `README.md` | @atiladeokegab (Zeus builds the diagrams) | #6, #7, #8 |
+| pool | `samples/`, `docs/demo.md` | pool | #4, #5 |
