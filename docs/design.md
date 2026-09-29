@@ -1,6 +1,6 @@
 # Design
 
-Designer: <name> (@<handle>). Owned by the designer: to change anything here, open a
+Designer: Atilade (@atiladeokegab). Owned by the designer: to change anything here, open a
 change-request (AGENTS.md §7) addressed to them. Each vertical's `Design:` line says which
 sections of this page it must follow.
 
@@ -8,23 +8,41 @@ sections of this page it must follow.
 
 ```mermaid
 flowchart LR
-    A["<the user's first step>"] --> B["<next step>"] --> C["<what they end with>"]
+    A["Open the page"] --> B["Drop or choose an image"] --> C["Preview shows; /describe starts at once"]
+    C --> D["Alt text appears in the card"] --> E["Read aloud or Copy"]
+    E --> B
+    C --> F["Error in the card"] --> B
 ```
 
 ## Screens and commands
 
 | Screen or command | Shows | The user can |
 |---|---|---|
-| <name> | <what is on it> | <actions> |
+| Page `/`, left pane | The drop zone; after a drop, the image preview in its place | Drop an image, click to choose a file, or drop another to start over |
+| Page `/`, right pane: "What a screen reader hears" card | The alt text, and a small badge naming the provider (`claude` or `offline stub`) | Read aloud (browser `speechSynthesis`), Copy |
+| Narrow screens (under 800px) | The two panes stacked: drop zone on top, card below | The same |
+| Look | Near-black background with a soft gradient glow; frosted-glass cards; one bright accent for buttons and focus rings; large type. Text and controls meet WCAG AA contrast, and every control works from the keyboard with a visible focus ring | — |
 
 ## States
 
 | Where | Empty | Loading | Error |
 |---|---|---|---|
-| <screen or command> | <what shows> | <what shows> | <message and what to do> |
+| Drop zone | Icon, "Drop an image here", "or choose a file" | The preview of the dropped image | Stays live: dropping again retries |
+| Card | "Your image's alt text will appear here." Read aloud and Copy disabled | Shimmer and "Looking at your image…". Read aloud and Copy disabled | The card switches to its error style with one sentence from Copy (415, 413, 502 or network) |
 
 ## Copy
 
 | Where | Words |
 |---|---|
-| <heading, button or message> | "<exact text>" |
+| Page title and heading | "Seen" |
+| Tagline | "Alt text for any image, in seconds." |
+| Drop zone | "Drop an image here" / "or choose a file" |
+| Card heading | "What a screen reader hears" |
+| Card, empty | "Your image's alt text will appear here." |
+| Card, loading | "Looking at your image…" |
+| Buttons | "Read aloud", "Copy" (becomes "Copied" for 2 seconds) |
+| Provider badge | "claude" / "offline stub" |
+| Error, wrong type (415) | "That file isn't an image we can read. Try a PNG, JPG, WebP or GIF." |
+| Error, too big (413) | "That image is over 5 MB. Try a smaller one." |
+| Error, model failed (502) | "We couldn't describe that image. Drop it again to retry." |
+| Error, network | "Can't reach the server. Check it's running, then drop again." |

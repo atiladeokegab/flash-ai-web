@@ -1,13 +1,15 @@
-# <Project name>
+# Seen
 
-<One paragraph: what we're building and who it's for.>
+Alt text for any image, in seconds. Drop an image on the page and Seen shows the alt text a
+screen reader should announce, and reads it aloud. It's for web authors who need alt text they would
+otherwise skip, and for the screen-reader users who then hear more than "image".
 
 What we're building and who owns which part: [IDEA.md](IDEA.md). Deadlines, rules and
 the team: [HACKATHON.md](HACKATHON.md). Who is doing what, live: the board linked in HACKATHON.md.
 
 ## Quick start
 
-1. `gh repo clone <this repo>`
+1. `gh repo clone atiladeokegab/flash-ai-web`
 2. Open your AI tool (Claude Code, Codex, Cursor, Copilot…) in the folder.
 3. Tell it: *"Read AGENTS.md, then pick up my issue."*
 
@@ -225,4 +227,10 @@ Every one of these happened for real while this kit was tested.
 
 ## Architecture
 
-<!-- the lead adds the C4 diagrams here -->
+Planned design; the Architecture diagrams task redraws these from the real code.
+
+![System context](docs/architecture/c4_context.png)
+
+![Containers](docs/architecture/c4_container.png)
+
+![Components of the API server](docs/architecture/c4_component.png)
