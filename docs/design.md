@@ -18,10 +18,11 @@ flowchart LR
 
 | Screen or command | Shows | The user can |
 |---|---|---|
+| Page `/`, top | A thin top bar with the "Seen" wordmark on the left; below it the hero headline and sub-line, centred | — |
 | Page `/`, left pane | The drop zone; after a drop, the image preview in its place | Drop an image, click to choose a file, or drop another to start over |
 | Page `/`, right pane: "What a screen reader hears" card | The alt text, and a small badge naming the provider (`claude` or `offline stub`) | Read aloud (browser `speechSynthesis`), Copy |
 | Narrow screens (under 800px) | The two panes stacked: drop zone on top, card below | The same |
-| Look | Near-black background with a soft gradient glow; frosted-glass cards; one bright accent for buttons and focus rings; large type. Text and controls meet WCAG AA contrast, and every control works from the keyboard with a visible focus ring | — |
+| Look | White background, near-black text (#191C1F), lots of whitespace. Hero: a huge, very heavy (800–900), uppercase, tightly tracked headline, centred, with one centred medium-weight sub-line under it. The image pane is a tall card with 24px rounded corners that the preview fills; the provider shows as a white pill chip over the image. The alt-text card is a floating white card with 24px corners and a soft shadow. Buttons are pills: Read aloud solid black with white text, Copy white with a 1px border. One indigo accent (#4F55F1), only for focus rings and the badge dot. Text and controls meet WCAG AA contrast; every control works from the keyboard with a visible focus ring. Style reference: a fintech homepage the designer chose; copy its style, never its brand | — |
 
 ## States
 
@@ -34,8 +35,9 @@ flowchart LR
 
 | Where | Words |
 |---|---|
-| Page title and heading | "Seen" |
-| Tagline | "Alt text for any image, in seconds." |
+| Page title and wordmark | "Seen" |
+| Hero headline | "ALT TEXT FOR ANY IMAGE, IN SECONDS." |
+| Hero sub-line | "Drop an image. Hear what a screen reader should say." |
 | Drop zone | "Drop an image here" / "or choose a file" |
 | Card heading | "What a screen reader hears" |
 | Card, empty | "Your image's alt text will appear here." |
